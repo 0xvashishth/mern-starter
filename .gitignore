@@ -8,6 +8,7 @@ bin-release/
 .settings/
 package-lock.json
 /node_modules
+/config/default.json
 # Executables
 *.swf
 *.air
