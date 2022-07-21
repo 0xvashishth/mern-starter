@@ -1,0 +1,31 @@
+{
+  "name": "mern-starter",
+  "version": "1.0.0",
+  "description": "A starter project for mern development",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "app": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasu-1/mern-starter.git"
+  },
+  "author": "Vashishth Patel",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/vasu-1/mern-starter/issues"
+  },
+  "homepage": "https://github.com/vasu-1/mern-starter#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6",
+    "validation": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

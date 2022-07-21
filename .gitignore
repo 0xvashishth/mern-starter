@@ -6,7 +6,8 @@ bin-release/
 
 # Other files and folders
 .settings/
-
+package-lock.json
+/node_modules
 # Executables
 *.swf
 *.air
