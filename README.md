@@ -166,7 +166,7 @@
 - Make components and make ready the frontend part of the project saperately.
 
 
-#### Now we will connect backend with frontedn
+#### Now we will connect backend with frontend
 
-- we need to install cors in our back-end (server-side) project. run `npm install cors` in baackend project.
-- 
+- we need to install cors in our back-end (server-side) project. run `npm install cors` in backend project.
+- now start the `npm start` in frontend and `npm run app` in backaend. It should Work!!
