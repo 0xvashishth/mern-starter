@@ -1,6 +1,6 @@
 # mern-starter
 
-### Guide To Initialze New Project
+### Guide To Initialize New Project
 
 #### Initial Project
 
@@ -13,7 +13,7 @@
 	- validation (as its name implies) is used for validation
 - Add NodeMon `npm i -D nodemon`
 	- nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
-- create `index.js` in root directory
+- create `index.js` in the root directory
 	```js
 	// index.js
 
@@ -29,7 +29,7 @@
 	```
 - Now run `node index`
 - check the website `http://localhost:8082`. It will display `Hello World!`.
-- Now Change `package.json` Of Scripts part.
+- Now Change `package.json` Of the Scripts part.
 	```js
 	"main": "index.js",
 	  "scripts": {
@@ -38,15 +38,15 @@
 	    "test": "echo \"Error: no test specified\" && exit 1"
 	  },
 	  ```
-- Now `npm install` & run `npm run app` and check the url again.
+- Now `npm install` & run `npm run app` and check the URL again.
 
 #### Mongo Database Setup
 
-- We will use mongo atlas for for database.
-- First create mongo atlas account at `https://www.mongodb.com/atlas/database`.
-- Create a cluster & add username and password. select choose the application & Copy the database link.
-- now create `config` directory inside root folder.
-- create `db.js` inside config directory & add following code.
+- We will use mongo atlas for database.
+- First, create a mongo atlas account at `https://www.mongodb.com/atlas/database`.
+- Create a cluster & add a username and password. select choose the application & Copy the database link.
+- now create the `config` directory inside the root folder.
+- create the `db.js` inside the config directory & add the following code.
 	```js
 	const mongoose = require('mongoose');
 	const config = require('config');
@@ -70,16 +70,16 @@
 
 	module.exports = connectDB;
 	```
-- create `default.json` in config directory & add it to `.gitignore`. because it will contain the database password & username.
+- create the `default.json` in config directory & add it to `.gitignore`. because it will contain the database password & username.
 - We need another dependency package called config for the global variable to run our project. `npm i config`
-- After this edit `index.js`. just add below two lines to check weather database is working properly or not.
+- After this edit `index.js`. just add below two lines to check whether a database is working properly or not.
 	```js
 	const connectDB = require('./config/db');
 	connectDB();
 	```
 - Now check the app. `npm run app` and see in the console. It should show `MongoDB is Connected...`. (Make allow all ip in the mongo cluster to invoke the request.)
 - Now create `Route` & `api` directories inside root directory.
-- Then create `book.js` inside `api` folder & add following code in it.
+- Then create the `book.js` inside the `api` folder & add the following code in it.
 	```js
 	// routes/api/books.js
 
@@ -158,15 +158,15 @@
 	- Show a single book
 	- Update a book
 	- Delete a book
-- Add following dependencies. Axios is a lightweight HTTP client based similar to a Fetch API. Axios is a promise-based async/await library for readable asynchronous code. We can easily integrate with React, and it is effortless to use in any front-end framework.
+- Add the following dependencies. Axios is a lightweight HTTP client based similar to a Fetch API. Axios is a promise-based async/await library for readable asynchronous code. We can easily integrate with React, and it is effortless to use in any front-end framework.
 	```
 	npm install --save react-router-dom
 	npm install --save axios
 	```
-- Make components and make ready the frontend part of the project saperately.
+- Make components and make ready the frontend part of the project separately.
 
 
-#### Now we will connect backend with frontend
+#### Now we will connect the backend with frontend
 
 - we need to install cors in our back-end (server-side) project. run `npm install cors` in backend project.
-- now start the `npm start` in frontend and `npm run app` in backaend. It should Work!!
+- now start the `npm start` in frontend and `npm run app` in the backend. It should Work!!
