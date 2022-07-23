@@ -147,3 +147,26 @@
 
 
 #### Now Time To Configure Our Frontend
+
+- We’ll use Create React App to generate our initial file setup.
+- just go to another directory. `npx create-react-app askoverflow`
+- test react app. `npm start`
+- Add some frontend dependencies with code. (available in public/index.html). It includes font-awesome and bootstrap dependencies.
+- Frontend tasks and features
+	- Add, create or save a new book
+	- Show all the books we have stored in the database
+	- Show a single book
+	- Update a book
+	- Delete a book
+- Add following dependencies. Axios is a lightweight HTTP client based similar to a Fetch API. Axios is a promise-based async/await library for readable asynchronous code. We can easily integrate with React, and it is effortless to use in any front-end framework.
+	```
+	npm install --save react-router-dom
+	npm install --save axios
+	```
+- Make components and make ready the frontend part of the project saperately.
+
+
+#### Now we will connect backend with frontedn
+
+- we need to install cors in our back-end (server-side) project. run `npm install cors` in baackend project.
+- 
