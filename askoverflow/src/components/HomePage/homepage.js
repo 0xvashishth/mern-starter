@@ -14,42 +14,40 @@ class homepage extends Component {
   }
 
   jquerychangecss = () => {
-    $(".clickleftmenu").click(function(){
-      $('.clickleftmenu').css('color','black')
-      .css('border','none')
-      .css('background','none');
+    $(".clickleftmenu").click(function () {
+      $(".clickleftmenu")
+        .css("color", "black")
+        .css("border", "none")
+        .css("background", "none");
     });
-    $('.clickleftmenu').on('click', function () {
+    $(".clickleftmenu").on("click", function () {
       var takenid = this.id;
-      var str = `#${takenid}`
-      $(str).css('color','#007bff')
-            .css('border-right','5px solid #007bff')
-            .css('background','')
-            .removeClass('bg-light')
-            .addClass('bg-sec');
-      
+      var str = `#${takenid}`;
+      $(str)
+        .css("color", "#007bff")
+        .css("border-right", "5px solid #007bff")
+        .css("background", "")
+        .removeClass("bg-light")
+        .addClass("bg-sec");
     });
-  }
+  };
 
-    initialcss = () => {
-    $('document').ready(function(){
-        $('#clickleftmenu1').css('color','#007bff')
-            .css('border-right','5px solid #007bff')
-            .removeClass('bg-light')
-            .addClass('bg-sec');
+  initialcss = () => {
+    $("document").ready(function () {
+      $("#clickleftmenu1")
+        .css("color", "#007bff")
+        .css("border-right", "5px solid #007bff")
+        .removeClass("bg-light")
+        .addClass("bg-sec");
     });
+  };
+
+  componentDidMount() {
+    this.jquerychangecss();
+    this.initialcss();
   }
-
-
-
-  componentDidMount(){
-    this.jquerychangecss()
-    this.initialcss()
-  }
-    
 
   render() {
-
     return (
       <div>
         <NavForHome />
@@ -64,7 +62,7 @@ class homepage extends Component {
                     href="#item-1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
                     style={{ fontSize: "18px", textDecoration: "none" }}
-                    id = "clickleftmenu1"
+                    id="clickleftmenu1"
                   >
                     Home
                   </a>
@@ -74,33 +72,59 @@ class homepage extends Component {
                     class="list-group-item clickleftmenu bg-light bg-gradient"
                     // data-toggle="collapse"
                     style={{ fontSize: "18px", textDecoration: "none" }}
-                    id = "clickleftmenu2"
+                    id="clickleftmenu2"
                   >
                     PUBLIC
                   </a>
-                  <div class="list-group list-group-flush bg-light bg-gradient" id="item-3">
-                    <a href="#item-3-1" id = "clickleftmenu3" style={{ textDecoration: "none" }} class=" clickleftmenu list-group-item bg-light bg-gradient">
+                  <div
+                    class="list-group list-group-flush bg-light bg-gradient"
+                    id="item-3"
+                  >
+                    <a
+                      href="#item-3-1"
+                      id="clickleftmenu3"
+                      style={{ textDecoration: "none" }}
+                      class=" clickleftmenu list-group-item bg-light bg-gradient"
+                    >
                       <i class="fas fa-globe-africa"></i>Questions
                       <span class="badge countbadge badge-primary">9</span>
                     </a>
 
-                    <a href="#item-3-2" id = "clickleftmenu4" style={{ textDecoration: "none" }} class="clickleftmenu list-group-item bg-light bg-gradient">
-                    <i class="fas fa-tags"></i>Tags<span class="badge countbadge badge-primary">9</span>
+                    <a
+                      href="#item-3-2"
+                      id="clickleftmenu4"
+                      style={{ textDecoration: "none" }}
+                      class="clickleftmenu list-group-item bg-light bg-gradient"
+                    >
+                      <i class="fas fa-tags"></i>Tags
+                      <span class="badge countbadge badge-primary">9</span>
                     </a>
 
-                    <a href="#item-3-3" id = "clickleftmenu5" style={{ textDecoration: "none" }} class="clickleftmenu list-group-item bg-light bg-gradient">
-                    <i class="fas fa-users"></i>Users<span class="badge countbadge badge-primary">9</span>
+                    <a
+                      href="#item-3-3"
+                      id="clickleftmenu5"
+                      style={{ textDecoration: "none" }}
+                      class="clickleftmenu list-group-item bg-light bg-gradient"
+                    >
+                      <i class="fas fa-users"></i>Users
+                      <span class="badge countbadge badge-primary">9</span>
                     </a>
 
-                    <a href="#item-3-3" id = "clickleftmenu6" style={{ textDecoration: "none" }} class="clickleftmenu list-group-item bg-light bg-gradient">
-                    <i class="fas fa-briefcase"></i>Jobs<span class="badge countbadge badge-primary">9</span>
+                    <a
+                      href="#item-3-3"
+                      id="clickleftmenu6"
+                      style={{ textDecoration: "none" }}
+                      class="clickleftmenu list-group-item bg-light bg-gradient"
+                    >
+                      <i class="fas fa-briefcase"></i>Jobs
+                      <span class="badge countbadge badge-primary">9</span>
                     </a>
                   </div>
                   <a
                     href="#item-1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
                     style={{ fontSize: "18px", textDecoration: "none" }}
-                    id = "clickleftmenu7"
+                    id="clickleftmenu7"
                   >
                     Teams
                   </a>
@@ -110,7 +134,7 @@ class homepage extends Component {
             <div class="col-9 bgmoredark">
               <div class="row margquesions">
                 <div class="col-9">
-                  <h3 class="allquesionhead">All Questions</h3> 
+                  <h3 class="allquesionhead">All Questions</h3>
                 </div>
                 <div class="col-3">
                   <button class="btn btn-secondary">Ask Question</button>
@@ -123,15 +147,23 @@ class homepage extends Component {
                 </div>
                 <div class="col-5">
                   <div class="row">
-                    <div class="col-3 bg-success text-dark btn btn-outline-success border border-dark">Newest</div>
-                    <div class="col-3 text-dark btn btn-outline-success border border-dark">Top</div>
-                    <div class="col-3 text-dark btn btn-outline-success border border-dark">Views</div>
-                    <div class="col-3 text-dark btn btn-outline-success border-dark">Oldest</div>
+                    <div class="col-3 bg-success text-dark btn btn-outline-success border border-dark">
+                      Newest
+                    </div>
+                    <div class="col-3 text-dark btn btn-outline-success border border-dark">
+                      Top
+                    </div>
+                    <div class="col-3 text-dark btn btn-outline-success border border-dark">
+                      Views
+                    </div>
+                    <div class="col-3 text-dark btn btn-outline-success border-dark">
+                      Oldest
+                    </div>
                   </div>
                 </div>
               </div>
-              <hr/>
-          </div>
+              <hr />
+            </div>
           </div>
         </div>
       </div>
