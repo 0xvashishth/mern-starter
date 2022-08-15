@@ -13,24 +13,42 @@ class homepage extends Component {
     };
   }
 
-  render() {
-    $(function () {
-      $(".list-group-item").on("click", function () {
-        $(".fas", this)
-          .toggleClass("fa-chevron-right")
-          .toggleClass("fa-chevron-down");
-      });
+  jquerychangecss = () => {
+    $(".clickleftmenu").click(function(){
+      $('.clickleftmenu').css('color','black')
+      .css('border','none')
+      .css('background','none');
     });
+    $('.clickleftmenu').on('click', function () {
+      var takenid = this.id;
+      var str = `#${takenid}`
+      $(str).css('color','#007bff')
+            .css('border-right','5px solid #007bff')
+            .css('background','')
+            .removeClass('bg-light')
+            .addClass('bg-sec');
+      
+    });
+  }
 
-    (function () {
-      $(".clickleftmenu").on("click", function () {
-        
-        $(".clickleftmenu", this)
-        .css("border-right-width", "10px")
-        .css("border-right-style", "solid")
-        .css("border-color", "red");
-      });
+    initialcss = () => {
+    $('document').ready(function(){
+        $('#clickleftmenu1').css('color','#007bff')
+            .css('border-right','5px solid #007bff')
+            .removeClass('bg-light')
+            .addClass('bg-sec');
     });
+  }
+
+
+
+  componentDidMount(){
+    this.jquerychangecss()
+    this.initialcss()
+  }
+    
+
+  render() {
 
     return (
       <div>
@@ -45,42 +63,75 @@ class homepage extends Component {
                   <a
                     href="#item-1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
-                    style={{ fontSize: "20px" }}
-                    data-toggle="collapse"
+                    style={{ fontSize: "18px", textDecoration: "none" }}
+                    id = "clickleftmenu1"
                   >
-                    HOME
+                    Home
                   </a>
 
                   <a
                     href="#item-3"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
-                    data-toggle="collapse"
-                    style={{ fontSize: "20px" }}
+                    // data-toggle="collapse"
+                    style={{ fontSize: "18px", textDecoration: "none" }}
+                    id = "clickleftmenu2"
                   >
                     PUBLIC
                   </a>
                   <div class="list-group list-group-flush bg-light bg-gradient" id="item-3">
-                    <a href="#item-3-1" class=" clickleftmenu list-group-item bg-light bg-gradient">
+                    <a href="#item-3-1" id = "clickleftmenu3" style={{ textDecoration: "none" }} class=" clickleftmenu list-group-item bg-light bg-gradient">
                       <i class="fas fa-globe-africa"></i>Questions
                       <span class="badge countbadge badge-primary">9</span>
                     </a>
 
-                    <a href="#item-3-2" class="clickleftmenu list-group-item bg-light bg-gradient">
+                    <a href="#item-3-2" id = "clickleftmenu4" style={{ textDecoration: "none" }} class="clickleftmenu list-group-item bg-light bg-gradient">
                     <i class="fas fa-tags"></i>Tags<span class="badge countbadge badge-primary">9</span>
                     </a>
 
-                    <a href="#item-3-3" class="clickleftmenu list-group-item bg-light bg-gradient">
+                    <a href="#item-3-3" id = "clickleftmenu5" style={{ textDecoration: "none" }} class="clickleftmenu list-group-item bg-light bg-gradient">
                     <i class="fas fa-users"></i>Users<span class="badge countbadge badge-primary">9</span>
                     </a>
 
-                    <a href="#item-3-3" class="clickleftmenu list-group-item bg-light bg-gradient">
+                    <a href="#item-3-3" id = "clickleftmenu6" style={{ textDecoration: "none" }} class="clickleftmenu list-group-item bg-light bg-gradient">
                     <i class="fas fa-briefcase"></i>Jobs<span class="badge countbadge badge-primary">9</span>
                     </a>
                   </div>
+                  <a
+                    href="#item-1"
+                    class="list-group-item clickleftmenu bg-light bg-gradient"
+                    style={{ fontSize: "18px", textDecoration: "none" }}
+                    id = "clickleftmenu7"
+                  >
+                    Teams
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="col-9"></div>
+            <div class="col-9 bgmoredark">
+              <div class="row margquesions">
+                <div class="col-9">
+                  <h3 class="allquesionhead">All Questions</h3> 
+                </div>
+                <div class="col-3">
+                  <button class="btn btn-secondary">Ask Question</button>
+                </div>
+              </div>
+
+              <div class="row margquesions1">
+                <div class="col-6">
+                  <h4 class="countallquesion">38 Questions</h4>
+                </div>
+                <div class="col-5">
+                  <div class="row">
+                    <div class="col-3 bg-success text-dark btn btn-outline-success border border-dark">Newest</div>
+                    <div class="col-3 text-dark btn btn-outline-success border border-dark">Top</div>
+                    <div class="col-3 text-dark btn btn-outline-success border border-dark">Views</div>
+                    <div class="col-3 text-dark btn btn-outline-success border-dark">Oldest</div>
+                  </div>
+                </div>
+              </div>
+              <hr/>
+          </div>
           </div>
         </div>
       </div>

@@ -79,3 +79,29 @@
     /* right: 25px; */
     margin-left: 30px;
   }
+
+  .bg-sec{
+    background-color: #b0d1f5;
+  }
+
+  .bgmoredark{
+    background-color: #f0f0f0;
+  }
+
+  .margquesions{
+    margin-top: 15px;
+  }
+
+  .margquesions1{
+    margin-top: 25px;
+  }
+
+  .allquesionhead{
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  .countallquesion{
+    font-size: 18px;
+    font-weight: 400;
+  }

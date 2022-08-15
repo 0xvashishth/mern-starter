@@ -11,7 +11,7 @@ const NavForHome = (props) => {
         <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <a href="/home" class="navbar-brand">
+            <a href="/home" class="navbar-brand" style={{fontWeight: "400"}}>
               {/* <img src="images/logo.svg" height="28" alt="CoolBrand" /> */}
               AskOverflow
             </a>
