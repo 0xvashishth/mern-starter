@@ -3,6 +3,8 @@ import "./homepage.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { NavForHome } from "../NavBar/NavBar";
+import { SideFeatured } from "../SideFeatured/sidefeatured"
+import { Questions } from "../Questions/questions"
 import $ from "jquery";
 
 class homepage extends Component {
@@ -53,15 +55,16 @@ class homepage extends Component {
         <NavForHome />
         <br />
         {/* Grid System for questions */}
-        <div class="container" style={{ bottom: "10px" }}>
+        <div class="">
           <div class="row">
-            <div class="col-3 bg-light bg-gradient">
+        {/*first grid*/}
+            <div class="col-2 bg-light bg-gradient">
               <div class="just-padding ">
                 <div class="list-group list-group-flush bg-light bg-gradient">
                   <a
                     href="#item-1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
-                    style={{ fontSize: "18px", textDecoration: "none" }}
+                    style={{ fontSize: "15px", textDecoration: "none" }}
                     id="clickleftmenu1"
                   >
                     Home
@@ -71,7 +74,7 @@ class homepage extends Component {
                     href="#item-3"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
                     // data-toggle="collapse"
-                    style={{ fontSize: "18px", textDecoration: "none" }}
+                    style={{ fontSize: "15px", textDecoration: "none" }}
                     id="clickleftmenu2"
                   >
                     PUBLIC
@@ -123,7 +126,7 @@ class homepage extends Component {
                   <a
                     href="#item-1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
-                    style={{ fontSize: "18px", textDecoration: "none" }}
+                    style={{ fontSize: "15px", textDecoration: "none" }}
                     id="clickleftmenu7"
                   >
                     Teams
@@ -131,10 +134,11 @@ class homepage extends Component {
                 </div>
               </div>
             </div>
-            <div class="col-9 bgmoredark">
+          {/*second grid*/}
+            <div class="col-7 bgmoredark">
               <div class="row margquesions">
                 <div class="col-9">
-                  <h3 class="allquesionhead">All Questions</h3>
+                  <h3 class="allquesionhead">Top Questions</h3>
                 </div>
                 <div class="col-3">
                   <button class="btn btn-secondary">Ask Question</button>
@@ -142,12 +146,12 @@ class homepage extends Component {
               </div>
 
               <div class="row margquesions1">
-                <div class="col-6">
+                <div class="col-5">
                   <h4 class="countallquesion">38 Questions</h4>
                 </div>
                 <div class="col-5">
                   <div class="row">
-                    <div class="col-3 bg-success text-dark btn btn-outline-success border border-dark">
+                    <div class="col-3 text-dark btn btn-outline-success border border-dark">
                       Newest
                     </div>
                     <div class="col-3 text-dark btn btn-outline-success border border-dark">
@@ -163,6 +167,26 @@ class homepage extends Component {
                 </div>
               </div>
               <hr />
+
+              <Questions />
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          {/*third grid*/}
+            <div class="col-3 bgmoredark">
+            <br/>
+              <SideFeatured/>
             </div>
           </div>
         </div>
