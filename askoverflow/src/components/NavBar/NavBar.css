@@ -1,0 +1,14 @@
+@media (min-width: 992px){
+.searchmainnav{
+	width: 500px !important;
+	/* max-width: 500px; */
+} }
+.fainbox{
+	font-size: 20px;
+	transition: transform ease 300ms;
+	position: relative;
+  top: 0;
+}
+.fainbox:hover{
+	transform: translate(0, -10px);
+}

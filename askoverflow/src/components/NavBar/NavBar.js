@@ -2,12 +2,47 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { Profileinsmall, Profileinlarge1 } from "../ProfileContent/profile";
+import $ from "jquery";
+
+let countloginsignup=0
 
 const NavForHome = (props) => {
   const book = props.book;
-var well={
+  var well={
             boxShadow: "0px 4px 0px 0px #f0f0f0"
         }
+  const  submitdataforloginorsignup = () => {
+    var tempvar = $("#loginuserconfirmidtochange").attr("name");
+    console.log(tempvar)
+  }
+
+  const signupmodalclick = () => {
+    if(countloginsignup%2 == 0){
+    var nameinput = "<div class='form-group'><input required type='text' class='nameremove1 form-control' id='user-name' placeholder='Name..'/></div>";
+    var emailinput = "<div class='form-group'><input required type='email' class='emailremove1 form-control' id='email-name' placeholder='Email..'/></div>";
+    $(".fornname").prepend(nameinput);
+    $(".fornname").prepend(emailinput);
+    $(".signupmodalclick").text("Have an account? Login");
+    $(".loginmodalLabelchange").text("Sign Up");
+    $("#loginuserconfirmidtochange").text("SignUp")
+                                    .attr("name", "signupuserconfirm");
+    $("#user-usernamename").attr("placeholder", "Create a username..");
+    $("#user-password").attr("placeholder", "Create a password..");
+      countloginsignup += 1
+
+    }else{
+      $(".nameremove1").remove();
+      $(".emailremove1").remove();
+      $(".signupmodalclick").text("Don't have an account? Sign up");
+      $("#user-usernamename").attr("placeholder", "Username..");
+      $("#user-password").attr("placeholder", "Password..");
+      $(".loginmodalLabelchange").text("Login");
+      $("#loginuserconfirmidtochange").text("Login");
+      $("#loginuserconfirmidtochange").attr("name", "loginuserconfirm");
+      countloginsignup += 1
+
+    }
+  }
 
   return (
     <div>
@@ -15,7 +50,7 @@ var well={
         <div class="container-fluid">
           <a href="/home" class="navbar-brand" style={{ fontWeight: "400" }}>
             {/* <img src="images/logo.svg" height="28" alt="CoolBrand" /> */}
-            AskOverflow
+            <i class="fab fa-stack-overflow"></i>&nbsp;AskOverflow
           </a>
           <Profileinsmall />
 
@@ -31,46 +66,54 @@ var well={
             class="collapse navbar-collapse justify-content-between"
             id="navbarCollapse"
           >
-            <div class="navbar-nav">
-              <a href="#" class="nav-item nav-link active">
-                Home
-              </a>
-              <a href="#" class="nav-item nav-link">
-                Profile
-              </a>
               <div class="nav-item dropdown">
                 <a
                   href="#"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
-                  Messages
+                  Products
                 </a>
                 <div class="dropdown-menu">
                   <a href="#" class="dropdown-item">
-                    Inbox
+                    StackExchange
                   </a>
                   <a href="#" class="dropdown-item">
-                    Sent
+                    Community Forum
                   </a>
                   <a href="#" class="dropdown-item">
-                    Drafts
+                    Code Editor
                   </a>
                 </div>
               </div>
-            </div>
-            <form class="d-flex">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" />
+            &nbsp;
+              <div class="d-flex">
+                <input type="text" class="form-control searchmainnav" placeholder="Search a question.." />
                 &nbsp;
                 <button type="button" class="btn btn-outline-primary">
                   <i class="fa fa-search"></i>
                 </button>
               </div>
-            </form>
-            {/* <div class> */}&nbsp; &nbsp;
-            <div class="row">
-              <div class="col-5"></div>
+            {/* <div class> */}
+            <div class="navbar-nav ml-auto">
+              <a href="#" class="fainbox nav-item nav-link">
+                <i class="fas fa-inbox"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav">
+              <a href="#" class="fainbox nav-item nav-link">
+                <i class="fas fa-trophy"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav">
+              <a href="#" class="fainbox nav-item nav-link">
+                <i class="fas fa-question-circle"></i>
+              </a>
+            </div>
+
+            <div class="row ml-auto">
               <div class="col-5 d-flex">
                 <button
                   type="button"
@@ -104,7 +147,7 @@ var well={
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="loginmodalLabel">
+              <h5 class="modal-title loginmodalLabelchange" id="loginmodalLabel">
                 Login
               </h5>
               <button
@@ -116,15 +159,16 @@ var well={
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+            
             <div class="modal-body">
-              <form>
-                <div class="form-group">
+                <div class="fornname form-group">
                   {/* <label for="recipient-name" class="col-form-label">Username:</label> */}
                   <input
                     type="text"
                     class="form-control"
-                    id="user-name"
+                    id="user-usernamename"
                     placeholder="Username.."
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -134,18 +178,16 @@ var well={
                     class="form-control"
                     id="user-password"
                     placeholder="Password.."
+                    required
                   />
                 </div>
-              </form>
             </div>
             <div class="container">
               <div class="row">
                 <div class="col-lg-7 col-sm-7 col-12 col-md-7">
                   <div class="row">
                     <div class="col-lg-4 col-sm-4 col-6 col-md-4">
-                      <button type="button" class="btn btn-primary">
-                        Submit
-                      </button>
+                      <input type="submit" onClick={submitdataforloginorsignup} name="loginuserconfirm" id="loginuserconfirmidtochange" class="btn btn-primary" />
                     </div>
                     <div class="col-lg-3 col-sm-3 col-6 col-md-4">
                       <button
@@ -160,9 +202,9 @@ var well={
                 </div>
 
                 <div class="col-lg-5 col-sm-5 col-12 col-md-5">
-                  <p>
-                    Don't have an account? <a href="#signupModal">Sign up</a>
-                  </p>
+                  <a href="#" class="signupmodalclick" onClick={signupmodalclick}>
+                    Don't have an account? Sign up
+                  </a>
                 </div>
               </div>
             </div>
@@ -170,6 +212,7 @@ var well={
           </div>
         </div>
       </div>
+
       {/* End of Modal */}
     </div>
   );
