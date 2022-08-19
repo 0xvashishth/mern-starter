@@ -57,7 +57,7 @@ class homepage extends Component {
         <div class="maincontent">
           <div class="row">
         {/*first grid*/}
-            <div class="col-2 bg-light bg-gradient">
+            <div class="col-sm-3 col-md-2 d-none d-sm-block">
               <div class="just-padding">
                 <div class="list-group list-group-flush bg-light bg-gradient">
                   <a
@@ -133,27 +133,29 @@ class homepage extends Component {
               </div>
             </div>
           {/*second grid*/}
-            <div class="col-7 bgmoredark">
+            <div class="col-sm-9 col-md-10 col-12 bgmoredark cssforpadTomaincontent">
+              <div class="row">
+              <div class="col-lg-8">
               <div class="row margquesions">
-                <div class="col-9">
+                <div class="col-7 col-xl-9 col-lg-8 col-md-7">
                   <h3 class="allquesionhead">Top Questions</h3>
                 </div>
-                <div class="col-3">
-                  <button class="btn btn-secondary">Ask Question</button>
+                <div class="col-5 col-xl-3 col-lg-4 col-md-5">
+                  <button class="btnaskquestion btn btn-secondary">Ask Question</button>
                 </div>
               </div>
 
               <div class="row margquesions1">
-                <div class="col-5">
+                <div class="col-lg-4 col-xl-6 col-md-3">
                   <h4 class="countallquesion">38 Questions</h4>
                 </div>
-                <div class="col-5">
+                <div class="col-lg-5 col-xl-5 col-md-6">
                   <div class="row">
                     <ul class="list-group list-group-horizontal">
-                      <a href="#" class="list-group-item active list-group-item-action border border-secondary">Newest</a>
-                      <a href="#" class="list-group-item d-flex align-items-center list-group-item-action border border-secondary"><span class="badge badge-secondary">15</span>&nbsp;&nbsp;Top</a>
-                      <a href="#" class="list-group-item list-group-item-action border border-secondary">Views</a>
-                      <a href="#" class="list-group-item list-group-item-action border border-secondary">Oldest</a>
+                      <a href="#" class="categoryonmaincontent list-group-item active list-group-item-action border border-secondary">Newest</a>
+                      <a href="#" class="categoryonmaincontent list-group-item d-flex align-items-center list-group-item-action border border-secondary"><span class="badge badge-secondary">15</span>&nbsp;&nbsp;Top</a>
+                      <a href="#" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Views</a>
+                      <a href="#" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Oldest</a>
                     </ul>
                   </div>
                 </div>
@@ -162,6 +164,7 @@ class homepage extends Component {
 
 
               <Questions />
+
               <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                   <li class="page-item disabled">
@@ -175,11 +178,12 @@ class homepage extends Component {
                   </li>
                 </ul>
               </nav>
-            </div>
-          {/*third grid*/}
-            <div class="col-3 bgmoredark">
-            <br/>
-              <SideFeatured/>
+              </div>
+              <div class="col-lg-4 bgmoredark">
+                <br/>
+                  <SideFeatured/>
+              </div>
+              </div>
             </div>
           </div>
         </div>

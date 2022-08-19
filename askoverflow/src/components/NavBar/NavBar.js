@@ -60,12 +60,15 @@ const NavForHome = (props) => {
 
   return (
     <div>
-      <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light" style={well}>
+      <nav class="fixed-top navbar navbar-expand-md navbar-light bg-light" style={well}>
         <div class="container-fluid">
-          <a href="/home" class="navbar-brand" style={{ fontWeight: "400" }}>
+          <div class="navbar-brand d-flex" style={{ fontWeight: "400" }}>
+          <div class="d-block d-sm-none"><i class="fas fa-bars"></i>&nbsp;&nbsp;</div>
+            <a href="/home" style={{ textDecoration: "none" }}>
             {/* <img src="images/logo.svg" height="28" alt="CoolBrand" /> */}
             <i class="fab fa-stack-overflow"></i>&nbsp;AskOverflow
-          </a>
+            </a>
+          </div>
           <Profileinsmall />
 
           <button

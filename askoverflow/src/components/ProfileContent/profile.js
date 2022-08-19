@@ -6,7 +6,7 @@ const Profileinsmall = (props) => {
     const  book  = props.book;
 
     return(
-        <div class="dropdown d-lg-none d-xl-none">
+        <div class="dropdown d-md-none d-lg-none d-xl-none">
               <button
                 class="btn btn-outline-secondary dropdown-toggle"
                 type="button"

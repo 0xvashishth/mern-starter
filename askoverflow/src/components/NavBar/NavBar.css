@@ -12,3 +12,36 @@
 .fainbox:hover{
 	transform: translate(0, -10px);
 }
+
+@media screen and (max-width: 576px) {
+	.searchmainnav{
+		width: 280px !important;
+	}
+}
+
+
+@media screen and (min-width: 577px) {
+	.searchmainnav{
+		width: 260px !important;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+  .searchmainnav{
+		width: 180px !important;
+	}
+}
+
+
+@media screen and (min-width: 992px) {
+  .searchmainnav{
+		width: 280px !important;
+	}
+}
+
+@media screen and (min-width: 1140px) {
+  .searchmainnav{
+		width: 380px !important;
+	}
+}
