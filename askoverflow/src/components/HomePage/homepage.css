@@ -45,8 +45,13 @@
 
 .just-padding {
   /* padding: 15px; */
+  position: fixed;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.maincontent{
+  padding-top: 60px;
 }
 
 .list-group.list-group-root {
@@ -86,7 +91,7 @@
 }
 
 .clickleftmenu{
-  font-size: 15px;
+  font-size: 11px;
 }
 
 .bg-sec {
@@ -95,6 +100,7 @@
 
 .bgmoredark {
   background-color: #f0f0f0;
+  box-shadow: 1px 3px 1px #9E9E9E;
 }
 
 .margquesions {
@@ -113,4 +119,12 @@
 .countallquesion {
   font-size: 18px;
   font-weight: 400;
+}
+.btn-outline-lessdark:hover{
+  background-color: #dbdbdb;
+}
+.list-group-horizontal .list-group-item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
 }

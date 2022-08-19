@@ -1,47 +1,80 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import "./sidefeatured.css"
 
 const SideFeatured = (props) => {
     const  book  = props.book;
-
+        var well={
+            boxShadow: "2px 1px 2px 1px #9E9E9E"
+        }
     return(
-        <div class="list-group container">
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" style={{background: "none"}}>
-                  <div class="d-flex w-100 justify-content-between">
+      <div>
+        <div class="list-group" style={well}>
+                <div class="list-group-item anchorsideheader flex-column align-items-start">
+                  <div class="d-flex w-100  justify-content-between">
                     
                     <small>The Overflow Blog</small>
                   </div>
                   
-                </a>
-                <div class="list-group-item list-group-item-action flex-column align-items-start" style={{background: "none"}}>
+                </div>
+                <div class="backcontentofheaderside list-group-item flex-column align-items-start">
                   <a href="#"><i class="fas fa-pencil-alt"></i><small class="text-muted">Donec id elit non mi porta.</small></a><br/><br/>
                   <a href="#"><i class="fas fa-pencil-alt"></i><small class="text-muted">Donec id elit non mi porta.</small></a>
                 </div>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" style={{background: "none"}}>
+                <div class="anchorsideheader list-group-item flex-column align-items-start">
                   <div class="d-flex w-100 justify-content-between">
                     
                     <small>The Featured Questions</small>
                   </div>
                   
-                </a>
-                <div class="list-group-item list-group-item-action flex-column align-items-start" style={{background: "none"}}>
+                </div>
+                <div class="backcontentofheaderside list-group-item flex-column align-items-start" >
                   <a href="#"><i class="fab fa-stack-overflow"></i><small class="text-muted">Whats your name ?</small></a><br/><br/>
                   <a href="#"><i class="fab fa-stack-overflow"></i><small class="text-muted">Whats your college name where you are studying ?</small></a><br/><br/>
                   <a href="#"><i class="fas fa-comment-alt"></i><small class="text-muted">Where are you from ?</small></a><br/><br/>
                   <a href="#"><i class="fas fa-comment-alt"></i><small class="text-muted">Where are the statue of liberty situated ?</small></a><br/>
                 </div>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" style={{background: "none"}}>
+                <div class="anchorsideheader list-group-item flex-column align-items-start">
                   <div class="d-flex w-100 justify-content-between">
                     
                     <small>Hot on Meta</small>
                   </div>
                   
-                </a>
-                <div class="list-group-item list-group-item-action flex-column align-items-start" style={{background: "none"}}>
+                </div>
+                <div class="backcontentofheaderside list-group-item flex-column align-items-start">
                   <a href="#"><i class="fas fa-pencil-alt"></i><small class="text-muted">Changing initializer-list tag wiki</small></a><br/><br/>
                   <a href="#"><i class="fas fa-pencil-alt"></i><small class="text-muted">Changing initializer-list tag wiki</small></a>
                 </div>
               </div>
+
+          <div class="list-group secondsidefeature" style={well}>
+                <div class="anchorsideheadersecond list-group-item flex-column align-items-start" >
+                  <div class="d-flex w-100 justify-content-between">
+                    
+                    <small>Custom Filter</small>
+                  </div>
+                  
+                </div>
+                <div class="anchorsideheadersecondanswer list-group-item flex-column align-items-start">
+                  <a href="#"><i class="fas fa-filter"></i><small class="text-muted">Create your custom filter.</small></a>
+                  </div>
+          </div>
+
+          <div class="list-group secondsidefeature" style={well}>
+                <div class="anchorsideheadersecond list-group-item flex-column align-items-start" >
+                  <div class="d-flex w-100 justify-content-between">
+                    
+                    <small>Ignored Tags</small>
+                  </div>
+                  
+                </div>
+                <div class="justify-content-center d-flex list-group-item">
+                  <a class="btn anchorsideheadersecondanswerbtn border-secondary" href="#"><small class="text-muted">Add an ignored tag</small></a>
+                  </div>
+          </div>
+          
+        </div>
+
     )
 };
 

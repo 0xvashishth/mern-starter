@@ -53,32 +53,30 @@ class homepage extends Component {
     return (
       <div>
         <NavForHome />
-        <br />
         {/* Grid System for questions */}
-        <div class="">
+        <div class="maincontent">
           <div class="row">
         {/*first grid*/}
             <div class="col-2 bg-light bg-gradient">
-              <div class="just-padding ">
+              <div class="just-padding">
                 <div class="list-group list-group-flush bg-light bg-gradient">
                   <a
                     href="#item-1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
-                    style={{ fontSize: "15px", textDecoration: "none" }}
+                    style={{ fontSize: "12px", textDecoration: "none" }}
                     id="clickleftmenu1"
                   >
                     Home
                   </a>
 
-                  <a
-                    href="#item-3"
+                  <div
                     class="list-group-item clickleftmenu bg-light bg-gradient"
                     // data-toggle="collapse"
-                    style={{ fontSize: "15px", textDecoration: "none" }}
+                    style={{ fontSize: "12px", textDecoration: "none" }}
                     id="clickleftmenu2"
                   >
                     PUBLIC
-                  </a>
+                  </div>
                   <div
                     class="list-group list-group-flush bg-light bg-gradient"
                     id="item-3"
@@ -126,7 +124,7 @@ class homepage extends Component {
                   <a
                     href="#item-1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
-                    style={{ fontSize: "15px", textDecoration: "none" }}
+                    style={{ fontSize: "12px", textDecoration: "none" }}
                     id="clickleftmenu7"
                   >
                     Teams
@@ -151,18 +149,12 @@ class homepage extends Component {
                 </div>
                 <div class="col-5">
                   <div class="row">
-                    <div class="col-3 text-dark btn btn-outline-success border border-dark">
-                      Newest
-                    </div>
-                    <div class="col-3 text-dark btn btn-outline-success border border-dark">
-                      Top
-                    </div>
-                    <div class="col-3 text-dark btn btn-outline-success border border-dark">
-                      Views
-                    </div>
-                    <div class="col-3 text-dark btn btn-outline-success border-dark">
-                      Oldest
-                    </div>
+                    <ul class="list-group list-group-horizontal">
+                      <a href="#" class="list-group-item active list-group-item-action border border-secondary">Newest</a>
+                      <a href="#" class="list-group-item d-flex align-items-center list-group-item-action border border-secondary"><span class="badge badge-secondary">15</span>&nbsp;&nbsp;Top</a>
+                      <a href="#" class="list-group-item list-group-item-action border border-secondary">Views</a>
+                      <a href="#" class="list-group-item list-group-item-action border border-secondary">Oldest</a>
+                    </ul>
                   </div>
                 </div>
               </div>

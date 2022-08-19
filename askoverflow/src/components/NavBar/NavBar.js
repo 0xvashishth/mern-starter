@@ -5,10 +5,13 @@ import { Profileinsmall, Profileinlarge1 } from "../ProfileContent/profile";
 
 const NavForHome = (props) => {
   const book = props.book;
+var well={
+            boxShadow: "0px 4px 0px 0px #f0f0f0"
+        }
 
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light" style={well}>
         <div class="container-fluid">
           <a href="/home" class="navbar-brand" style={{ fontWeight: "400" }}>
             {/* <img src="images/logo.svg" height="28" alt="CoolBrand" /> */}
@@ -67,7 +70,8 @@ const NavForHome = (props) => {
             </form>
             {/* <div class> */}&nbsp; &nbsp;
             <div class="row">
-              <div class="col-8 d-flex">
+              <div class="col-5"></div>
+              <div class="col-5 d-flex">
                 <button
                   type="button"
                   class="btn btn-outline-primary nav-item"
@@ -77,7 +81,7 @@ const NavForHome = (props) => {
                   Login
                 </button>
               </div>
-              <div class="col-4">
+              <div class="col-1">
                 <Profileinlarge1 />
               </div>
             </div>
