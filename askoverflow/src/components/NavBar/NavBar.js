@@ -16,6 +16,20 @@ const NavForHome = (props) => {
     console.log(tempvar)
   }
 
+  function openPage(evt, pageName) {
+    var i, pagecontent, tablinks;
+    pagecontent = document.getElementsByClassName("Right-bar");
+    for (i = 0; i < pagecontent.length; i++) {
+        pagecontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("nav-tab");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(pageName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
   const signupmodalclick = () => {
     if(countloginsignup%2 == 0){
     var nameinput = "<div class='form-group'><input required type='text' class='nameremove1 form-control' id='user-name' placeholder='Name..'/></div>";
