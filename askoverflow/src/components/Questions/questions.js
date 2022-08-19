@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './questions.css';
 import fox from "./fox.jpg";
+import TextTruncate from 'react-text-truncate';
 
 const Questions = (props) => {
     const  book  = props.book;
@@ -58,9 +59,7 @@ const Questions = (props) => {
                 </div>
 
                 <div class="col-7">
-                    <a href="#" class="header-question text-primary" style={{textDecoration: "none"}}>
-                      The community is here to help you with specific coding, algorithm, or language problems. Avoid asking opini
-                    </a><br/>
+                    <a href="#" class="header-question text-primary" style={{textDecoration: "none"}}><TextTruncate line={1} text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/></a>
                     <a href="#" class="badge badge-secondary badge-pad">html</a>&nbsp;
                     <a href="#" class="badge badge-secondary badge-pad">javascript</a>&nbsp;
                     <a href="#" class="badge badge-secondary badge-pad">ajax</a>&nbsp;
