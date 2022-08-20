@@ -150,10 +150,10 @@ class homepage extends Component {
                 <div class="col-lg-5 col-xl-5 col-md-6">
                   <div class="row">
                     <ul class="list-group list-group-horizontal">
-                      <a href="#" class="categoryonmaincontent list-group-item active list-group-item-action border border-secondary">Newest</a>
-                      <a href="#" class="categoryonmaincontent list-group-item d-flex align-items-center list-group-item-action border border-secondary"><span class="badge badge-secondary">15</span>&nbsp;&nbsp;Top</a>
-                      <a href="#" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Views</a>
-                      <a href="#" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Oldest</a>
+                      <a href="#homepagelink" class="categoryonmaincontent list-group-item active list-group-item-action border border-secondary">Newest</a>
+                      <a href="#homepagelink" class="categoryonmaincontent list-group-item d-flex align-items-center list-group-item-action border border-secondary"><span class="badge badge-secondary">15</span>&nbsp;&nbsp;Top</a>
+                      <a href="#homepagelink" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Views</a>
+                      <a href="#homepagelink" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Oldest</a>
                     </ul>
                   </div>
                 </div>
@@ -166,13 +166,13 @@ class homepage extends Component {
               <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                   <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    <a class="page-link" href="#homepagelink" tabindex="-1">Previous</a>
                   </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#1">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#1">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#1">3</a></li>
                   <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
+                    <a class="page-link" href="#homepagelink">Next</a>
                   </li>
                 </ul>
               </nav>

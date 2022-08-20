@@ -2,7 +2,7 @@ import React from 'react';
 import './profile.css';
 
 const Profileinsmall = (props) => {
-    const  book  = props.book;
+    // const  book  = props.book;
 
     return(
         <div class="dropdown d-md-none d-lg-none d-xl-none">
@@ -17,6 +17,7 @@ const Profileinsmall = (props) => {
                   src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
                   width="30"
                   height="30"
+                  alt="avatar"
                   class="rounded-circle"
                 />
                 
@@ -43,7 +44,7 @@ const Profileinsmall = (props) => {
 };
 
 const Profileinlarge1 = (props) => {
-    const  book  = props.book;
+    // const  book  = props.book;
 
     return(
         <div class="dropdown .d-lg-none .d-xl-block">
@@ -58,6 +59,7 @@ const Profileinlarge1 = (props) => {
                   src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
                   width="30"
                   height="30"
+                  alt="avatar"
                   class="rounded-circle"
                 />
                 

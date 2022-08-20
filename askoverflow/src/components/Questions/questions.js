@@ -4,7 +4,7 @@ import fox from "./fox.jpg";
 import TextTruncate from 'react-text-truncate';
 
 const Questions = (props) => {
-    const  book  = props.book;
+    // const  book  = props.book;
     var repeatQuestions = [];
     for(var i=0;i<8;i++){
     repeatQuestions[i] = <div>
@@ -19,21 +19,22 @@ const Questions = (props) => {
                 <div class="col-md-10">
                     <div class="row">
                         <div class="row">
-                        <a href="#" class="header-question text-primary" style={{textDecoration: "none"}}><TextTruncate line={2} text="Lorem this is not the right answer the things with is remaining Ipsum is simply dummy text of the printing and typesetting industry."/></a>
+                        <a href="#header" class="header-question text-primary" style={{textDecoration: "none"}}><TextTruncate line={2} text="Lorem this is not the right answer the things with is remaining Ipsum is simply dummy text of the printing and typesetting industry."/></a>
                         </div>
                         <div class="row">
                                 <div class="col-8">
-                                    <a href="#" class="badge badge-pad">html</a>&nbsp;
-                                    <a href="#" class="badge badge-pad">javascript</a>&nbsp;
-                                    <a href="#" class="badge badge-pad">ajax</a>&nbsp;
+                                    <a href="#badge" class="badge badge-pad">html</a>&nbsp;
+                                    <a href="#badge" class="badge badge-pad">javascript</a>&nbsp;
+                                    <a href="#badge" class="badge badge-pad">ajax</a>&nbsp;
                                 </div>
                                 <div class="col-4">
                                     <div class="d-flex">
                                       <img 
                                       width="20"
                                       height="20"
+                                      alt="focximg"
                                       class="" style={{borderRadius: "10px"}} src={fox} />&nbsp;
-                                      <a class="avatarusername" href="#" style={{textDecoration: "none"}}><span class="avatarname">vasu</span></a>&nbsp;<div class="daysagocss">
+                                      <a class="avatarusername" href="#avatarlink" style={{textDecoration: "none"}}><span class="avatarname">vasu</span></a>&nbsp;<div class="daysagocss">
                                       asked 14 days ago
                                     </div>
                                 </div>

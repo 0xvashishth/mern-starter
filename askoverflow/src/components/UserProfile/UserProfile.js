@@ -20,7 +20,7 @@ class userprofile extends Component {
     }
 
     const openPage = (event, pageName) => {
-      var i, pagecontent, tablinks;
+      var i, pagecontent;
       pagecontent = document.getElementsByClassName("Right-bar");
       for (i = 0; i < pagecontent.length; i++) {
           pagecontent[i].style.display = "none";
@@ -40,49 +40,49 @@ class userprofile extends Component {
       </div>
       <ul class="nav-links">
         <li>
-          <a href="#" class="active" onClick={event => openPage(event, 'contentName1')}>
+          <a href="#sidenav-links" class="active" onClick={event => openPage(event, 'contentName1')}>
             <i class="fas fa-tachometer-alt"></i>
             <span class="nav-1 links_name nav-tab active">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="#" onClick={event => openPage(event, 'user_answers')}>
+          <a href="#sidenav-links" onClick={event => openPage(event, 'user_answers')}>
             <i class='fas fa-user' ></i>
             <span class="nav-2 links_name nav-tab">Your Answers</span>
           </a>
         </li>
         <li>
-          <a href="#" onClick={event => openPage(event, 'user_questions')}>
+          <a href="#sidenav-links" onClick={event => openPage(event, 'user_questions')}>
             <i class="fas fa-question"></i>
             <span class="nav-3 links_name nav-tab" >Your Questions</span>
           </a>
         </li>
         <li>
-          <a href="#" onClick={event => openPage(event, 'user_comments')}>
+          <a href="#sidenav-links" onClick={event => openPage(event, 'user_comments')}>
             <i class="fas fa-comments"></i>
             <span class="nav-4 links_name nav-tab" >Your Comments</span>
           </a>
         </li>
         <li>
-          <a href="#" onClick={event => openPage(event, 'user_discussion')}>
+          <a href="#sidenav-links" onClick={event => openPage(event, 'user_discussion')}>
             <i class="fas fa-comment"></i>
             <span class="nav-5 links_name nav-tab">Discussion</span>
           </a>
         </li>
         <li>
-          <a href="#" onClick={event => openPage(event, 'user_teams')}> 
+          <a href="#sidenav-links" onClick={event => openPage(event, 'user_teams')}> 
             <i class="fas fa-user-friends"></i>
             <span class="nav-6 links_name nav-tab">Teams</span>
           </a>
         </li>
         <li>
-          <a href="#" onClick={event => openPage(event, 'user_settings')}> 
+          <a href="#sidenav-links" onClick={event => openPage(event, 'user_settings')}> 
             <i class='fas fa-cog' ></i>
             <span class="nav-6 links_name nav-tab">Setting</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#sidenav-links">
             <i class="fas fa-arrow-alt-circle-left"></i>
             <span class="links_name">Log out</span>
           </a>

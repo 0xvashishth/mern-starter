@@ -1,12 +1,12 @@
 import React from "react";
 import "./NavBar.css";
-import { Profileinsmall, Profileinlarge1 } from "../ProfileContent/profile";
+import { Profileinlarge1 } from "../ProfileContent/profile";
 import $ from "jquery";
 
 let countloginsignup=0
 
 const NavForHome = (props) => {
-  const book = props.book;
+  // const book = props.book;
   var well={
             boxShadow: "0px 4px 0px 0px #f0f0f0"
         }
@@ -15,22 +15,22 @@ const NavForHome = (props) => {
     console.log(tempvar)
   }
 
-  function openPage(evt, pageName) {
-    var i, pagecontent, tablinks;
-    pagecontent = document.getElementsByClassName("Right-bar");
-    for (i = 0; i < pagecontent.length; i++) {
-        pagecontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("nav-tab");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(pageName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+//   function openPage(evt, pageName) {
+//     var i, pagecontent, tablinks;
+//     pagecontent = document.getElementsByClassName("Right-bar");
+//     for (i = 0; i < pagecontent.length; i++) {
+//         pagecontent[i].style.display = "none";
+//     }
+//     tablinks = document.getElementsByClassName("nav-tab");
+//     for (i = 0; i < tablinks.length; i++) {
+//         tablinks[i].className = tablinks[i].className.replace(" active", "");
+//     }
+//     document.getElementById(pageName).style.display = "block";
+//     evt.currentTarget.className += " active";
+// }
 
   const signupmodalclick = () => {
-    if(countloginsignup%2 == 0){
+    if(countloginsignup%2 === 0){
     var nameinput = "<div class='form-group'><input required type='text' class='nameremove1 form-control' id='user-name' placeholder='Name..'/></div>";
     var emailinput = "<div class='form-group'><input required type='email' class='emailremove1 form-control' id='email-name' placeholder='Email..'/></div>";
     $(".fornname").prepend(nameinput);
@@ -87,20 +87,20 @@ const NavForHome = (props) => {
           >
               <div class="nav-item dropdown">
                 <a
-                  href="#"
+                  href="#items-navbar"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
                   Products
                 </a>
                 <div class="dropdown-menu">
-                  <a href="#" class="dropdown-item">
+                  <a href="#items-navbar" class="dropdown-item">
                     StackExchange
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#items-navbar" class="dropdown-item">
                     Community Forum
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#items-navbar" class="dropdown-item">
                     Code Editor
                   </a>
                 </div>
@@ -115,19 +115,19 @@ const NavForHome = (props) => {
               </div>
             {/* <div class> */}
             <div class="d-none d-md-block navbar-nav ml-auto">
-              <a href="#" class="fainbox nav-item nav-link">
+              <a href="#items-navbar" class="fainbox nav-item nav-link">
                 <i class="fas fa-inbox"></i>
               </a>
             </div>
 
             <div class="d-none d-md-block navbar-nav">
-              <a href="#" class="fainbox nav-item nav-link">
+              <a href="#items-navbar" class="fainbox nav-item nav-link">
                 <i class="fas fa-trophy"></i>
               </a>
             </div>
 
             <div class="d-none d-md-block navbar-nav">
-              <a href="#" class="fainbox nav-item nav-link">
+              <a href="#items-navbar" class="fainbox nav-item nav-link">
                 <i class="fas fa-question-circle"></i>
               </a>
             </div>
@@ -221,7 +221,7 @@ const NavForHome = (props) => {
                 </div>
 
                 <div class="col-lg-5 col-sm-5 col-12 col-md-5">
-                  <a href="#" class="signupmodalclick" onClick={signupmodalclick}>
+                  <a href="#navlinksnew" class="signupmodalclick" onClick={signupmodalclick}>
                     Don't have an account? Sign up
                   </a>
                 </div>
@@ -243,12 +243,12 @@ const NavForHome = (props) => {
     <div class="offcanvas-body px-0">
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
             <li class="nav-item mx-auto">
-                <a href="#" class="nav-link text-truncate" style={{fontSize: "30px"}}>
+                <a href="#navlinksnew" class="nav-link text-truncate" style={{fontSize: "30px"}}>
                     <i class="fab fa-stack-overflow"></i>&nbsp;AskOverflow
                 </a>
             </li> 
             <li class="nav-item mx-auto">
-                <a href="#" class="nav-link text-truncate">
+                <a href="#navlinksnew" class="nav-link text-truncate">
                     <i class="fas fa-house"></i><span class="ms-1">Home</span>
                 </a>
             </li>
@@ -257,44 +257,44 @@ const NavForHome = (props) => {
                     <i class="fas fa-tachometer-alt"></i><span class="ms-1">Dashboard</span> </a>
             </li>
             <li class="mx-auto">
-                <a href="#" class="nav-link text-truncate">
+                <a href="#navlinksnew" class="nav-link text-truncate">
                     <i class="fas fa-table"></i><span class="ms-1">Orders</span></a>
             </li>
             <li class="dropdown mx-auto">
-                <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="#navlinksnew" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-sitemap"></i><span class="ms-1">Products</span>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
-                    <li><a class="dropdown-item" href="#">StackExchange</a></li>
-                    <li><a class="dropdown-item" href="#">Community Forum</a></li>
-                    <li><a class="dropdown-item" href="#">Code Editor</a></li>
+                    <li><a class="dropdown-item" href="#navlinksnew">StackExchange</a></li>
+                    <li><a class="dropdown-item" href="#navlinksnew">Community Forum</a></li>
+                    <li><a class="dropdown-item" href="#navlinksnew">Code Editor</a></li>
                     <li>
                         <hr class="dropdown-divider"/>
                     </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item" href="navlinksnew">Sign out</a></li>
                 </ul>
             </li>
             <li class="nav-item d-flex mx-auto">
               <div class="d-block d-md-none">
-              <a href="#" class="fainbox nav-link">
+              <a href="#navlinksnew" class="fainbox nav-link">
                 <i class="fas fa-inbox"></i>
               </a>
             </div>
 
             <div class="d-block d-md-none">
-              <a href="#" class="fainbox nav-link">
+              <a href="#navlinksnew" class="fainbox nav-link">
                 <i class="fas fa-trophy"></i>
               </a>
             </div>
 
             <div class="d-block d-md-none">
-              <a href="#" class="fainbox nav-link">
+              <a href="#navlinksnew" class="fainbox nav-link">
                 <i class="fas fa-question-circle"></i>
               </a>
             </div>
             </li>
             <li class="mx-auto">
-                <a href="#" class="nav-link text-truncate">
+                <a href="#custo" class="nav-link text-truncate">
                     <i class="fas fa-users"></i><span class="ms-1">Customers</span> </a>
             </li>
         </ul>

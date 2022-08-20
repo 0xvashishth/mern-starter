@@ -2,7 +2,7 @@ import React from 'react';
 import "./sidefeatured.css"
 
 const SideFeatured = (props) => {
-    const  book  = props.book;
+    // const  book  = props.book;
         var well={
             boxShadow: "2px 1px 2px 1px #9E9E9E"
         }
@@ -17,8 +17,8 @@ const SideFeatured = (props) => {
                   
                 </div>
                 <div class="backcontentofheaderside list-group-item flex-column align-items-start">
-                  <a href="#"><i class="fas fa-pencil-alt"></i><small class="text-muted">Donec id elit non mi porta.</small></a><br/><br/>
-                  <a href="#"><i class="fas fa-pencil-alt"></i><small class="text-muted">Donec id elit non mi porta.</small></a>
+                  <a href="#questions"><i class="fas fa-pencil-alt"></i><small class="text-muted">Donec id elit non mi porta.</small></a><br/><br/>
+                  <a href="#questions"><i class="fas fa-pencil-alt"></i><small class="text-muted">Donec id elit non mi porta.</small></a>
                 </div>
                 <div class="anchorsideheader list-group-item flex-column align-items-start">
                   <div class="d-flex w-100 justify-content-between">
@@ -28,10 +28,10 @@ const SideFeatured = (props) => {
                   
                 </div>
                 <div class="backcontentofheaderside list-group-item flex-column align-items-start" >
-                  <a href="#"><i class="fab fa-stack-overflow"></i><small class="text-muted">Whats your name ?</small></a><br/><br/>
-                  <a href="#"><i class="fab fa-stack-overflow"></i><small class="text-muted">Whats your college name where you are studying ?</small></a><br/><br/>
-                  <a href="#"><i class="fas fa-comment-alt"></i><small class="text-muted">Where are you from ?</small></a><br/><br/>
-                  <a href="#"><i class="fas fa-comment-alt"></i><small class="text-muted">Where are the statue of liberty situated ?</small></a><br/>
+                  <a href="#questions"><i class="fab fa-stack-overflow"></i><small class="text-muted">Whats your name ?</small></a><br/><br/>
+                  <a href="#questions"><i class="fab fa-stack-overflow"></i><small class="text-muted">Whats your college name where you are studying ?</small></a><br/><br/>
+                  <a href="#questions"><i class="fas fa-comment-alt"></i><small class="text-muted">Where are you from ?</small></a><br/><br/>
+                  <a href="#questions"><i class="fas fa-comment-alt"></i><small class="text-muted">Where are the statue of liberty situated ?</small></a><br/>
                 </div>
                 <div class="anchorsideheader list-group-item flex-column align-items-start">
                   <div class="d-flex w-100 justify-content-between">
@@ -41,8 +41,8 @@ const SideFeatured = (props) => {
                   
                 </div>
                 <div class="backcontentofheaderside list-group-item flex-column align-items-start">
-                  <a href="#"><i class="fas fa-pencil-alt"></i><small class="text-muted">Changing initializer-list tag wiki</small></a><br/><br/>
-                  <a href="#"><i class="fas fa-pencil-alt"></i><small class="text-muted">Changing initializer-list tag wiki</small></a>
+                  <a href="#questions"><i class="fas fa-pencil-alt"></i><small class="text-muted">Changing initializer-list tag wiki</small></a><br/><br/>
+                  <a href="#questions"><i class="fas fa-pencil-alt"></i><small class="text-muted">Changing initializer-list tag wiki</small></a>
                 </div>
               </div>
 
@@ -55,7 +55,7 @@ const SideFeatured = (props) => {
                   
                 </div>
                 <div class="anchorsideheadersecondanswer list-group-item flex-column align-items-start">
-                  <a href="#"><i class="fas fa-filter"></i><small class="text-muted">Create your custom filter.</small></a>
+                  <a href="#questions"><i class="fas fa-filter"></i><small class="text-muted">Create your custom filter.</small></a>
                   </div>
           </div>
 
@@ -68,8 +68,8 @@ const SideFeatured = (props) => {
                   
                 </div>
                 <div class="justify-content-center d-flex list-group-item">
-                  <a href="#" class="btn anchorsideheadersecondanswerbtn border-secondary" href="#"><small class="text-muted">Add an ignored tag</small></a>
-                  </div>
+                  <a href="#questions" class="btn anchorsideheadersecondanswerbtn border-secondary"><small class="text-muted">Add an ignored tag</small></a>
+                </div>
           </div>
           
         </div>
