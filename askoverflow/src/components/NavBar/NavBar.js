@@ -61,20 +61,23 @@ const NavForHome = (props) => {
     <div>
       <nav class="fixed-top navbar navbar-expand-md navbar-light bg-light" style={well}>
         <div class="container-fluid">
-          <div class="navbar-brand d-flex" style={{ fontWeight: "400" }}>
-          <div class="d-block d-sm-none"><i class="fas fa-bars"></i>&nbsp;&nbsp;</div>
-            <a href="/home" style={{ textDecoration: "none" }}>
-            {/* <img src="images/logo.svg" height="28" alt="CoolBrand" /> */}
+          <div class="navbar-brand d-flex" style={{ fontWeight: "400" }}>   
+            <a href="/home" style={{ textDecoration: "none" }}>  
             <i class="fab fa-stack-overflow"></i>&nbsp;AskOverflow
             </a>
           </div>
-          <Profileinsmall />
-
+          <button
+                  type="button"
+                  class="d-block d-md-none btn btn-outline-primary"
+                  data-toggle="modal"
+                  data-target="#loginModal"
+                >
+                  Login
+          </button>
           <button
             type="button"
             class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -111,26 +114,26 @@ const NavForHome = (props) => {
                 </button>
               </div>
             {/* <div class> */}
-            <div class="navbar-nav ml-auto">
+            <div class="d-none d-md-block navbar-nav ml-auto">
               <a href="#" class="fainbox nav-item nav-link">
                 <i class="fas fa-inbox"></i>
               </a>
             </div>
 
-            <div class="navbar-nav">
+            <div class="d-none d-md-block navbar-nav">
               <a href="#" class="fainbox nav-item nav-link">
                 <i class="fas fa-trophy"></i>
               </a>
             </div>
 
-            <div class="navbar-nav">
+            <div class="d-none d-md-block navbar-nav">
               <a href="#" class="fainbox nav-item nav-link">
                 <i class="fas fa-question-circle"></i>
               </a>
             </div>
 
             <div class="row ml-auto">
-              <div class="col-5 d-flex">
+              <div class="col-5  d-flex d-sm-none d-none d-md-block">
                 <button
                   type="button"
                   class="btn btn-outline-primary nav-item"
@@ -230,6 +233,73 @@ const NavForHome = (props) => {
       </div>
 
       {/* End of Modal */}
+    
+    {/*Sidebar Start*/}
+    <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-0">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+            <li class="nav-item mx-auto">
+                <a href="#" class="nav-link text-truncate" style={{fontSize: "30px"}}>
+                    <i class="fab fa-stack-overflow"></i>&nbsp;AskOverflow
+                </a>
+            </li> 
+            <li class="nav-item mx-auto">
+                <a href="#" class="nav-link text-truncate">
+                    <i class="fas fa-house"></i><span class="ms-1">Home</span>
+                </a>
+            </li>
+            <li class="mx-auto">
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+                    <i class="fas fa-tachometer-alt"></i><span class="ms-1">Dashboard</span> </a>
+            </li>
+            <li class="mx-auto">
+                <a href="#" class="nav-link text-truncate">
+                    <i class="fas fa-table"></i><span class="ms-1">Orders</span></a>
+            </li>
+            <li class="dropdown mx-auto">
+                <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-sitemap"></i><span class="ms-1">Products</span>
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                    <li><a class="dropdown-item" href="#">StackExchange</a></li>
+                    <li><a class="dropdown-item" href="#">Community Forum</a></li>
+                    <li><a class="dropdown-item" href="#">Code Editor</a></li>
+                    <li>
+                        <hr class="dropdown-divider"/>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </li>
+            <li class="nav-item d-flex mx-auto">
+              <div class="d-block d-md-none">
+              <a href="#" class="fainbox nav-link">
+                <i class="fas fa-inbox"></i>
+              </a>
+            </div>
+
+            <div class="d-block d-md-none">
+              <a href="#" class="fainbox nav-link">
+                <i class="fas fa-trophy"></i>
+              </a>
+            </div>
+
+            <div class="d-block d-md-none">
+              <a href="#" class="fainbox nav-link">
+                <i class="fas fa-question-circle"></i>
+              </a>
+            </div>
+            </li>
+            <li class="mx-auto">
+                <a href="#" class="nav-link text-truncate">
+                    <i class="fas fa-users"></i><span class="ms-1">Customers</span> </a>
+            </li>
+        </ul>
+    </div>
+</div>
     </div>
   );
 };
