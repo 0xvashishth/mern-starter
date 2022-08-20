@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./UserProfile.css";
-import axios from "axios";
-import { Link } from "react-router-dom";
 import $ from "jquery";
 import fox from "../Questions/fox.jpg";
 import "./script.js"

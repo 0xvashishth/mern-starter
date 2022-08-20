@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './questions.css';
 import fox from "./fox.jpg";
 import TextTruncate from 'react-text-truncate';

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { Profileinsmall, Profileinlarge1 } from "../ProfileContent/profile";
 import $ from "jquery";

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import "./sidefeatured.css"
 
 const SideFeatured = (props) => {
@@ -69,7 +68,7 @@ const SideFeatured = (props) => {
                   
                 </div>
                 <div class="justify-content-center d-flex list-group-item">
-                  <a class="btn anchorsideheadersecondanswerbtn border-secondary" href="#"><small class="text-muted">Add an ignored tag</small></a>
+                  <a href="#" class="btn anchorsideheadersecondanswerbtn border-secondary" href="#"><small class="text-muted">Add an ignored tag</small></a>
                   </div>
           </div>
           

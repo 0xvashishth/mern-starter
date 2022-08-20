@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./homepage.css";
-import axios from "axios";
-import { Link } from "react-router-dom";
 import { NavForHome } from "../NavBar/NavBar";
 import { SideFeatured } from "../SideFeatured/sidefeatured"
 import { Questions } from "../Questions/questions"
@@ -61,7 +59,7 @@ class homepage extends Component {
               <div class="just-padding">
                 <div class="list-group list-group-flush bg-light bg-gradient">
                   <a
-                    href="#item-1"
+                    href="#item1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
                     style={{ fontSize: "12px", textDecoration: "none" }}
                     id="clickleftmenu1"
@@ -82,7 +80,7 @@ class homepage extends Component {
                     id="item-3"
                   >
                     <a
-                      href="#item-3-1"
+                      href="#item31"
                       id="clickleftmenu3"
                       style={{ textDecoration: "none" }}
                       class=" clickleftmenu list-group-item bg-light bg-gradient"
@@ -92,7 +90,7 @@ class homepage extends Component {
                     </a>
 
                     <a
-                      href="#item-3-2"
+                      href="#item32"
                       id="clickleftmenu4"
                       style={{ textDecoration: "none" }}
                       class="clickleftmenu list-group-item bg-light bg-gradient"
@@ -102,7 +100,7 @@ class homepage extends Component {
                     </a>
 
                     <a
-                      href="#item-3-3"
+                      href="#item33"
                       id="clickleftmenu5"
                       style={{ textDecoration: "none" }}
                       class="clickleftmenu list-group-item bg-light bg-gradient"
@@ -112,7 +110,7 @@ class homepage extends Component {
                     </a>
 
                     <a
-                      href="#item-3-3"
+                      href="#item33"
                       id="clickleftmenu6"
                       style={{ textDecoration: "none" }}
                       class="clickleftmenu list-group-item bg-light bg-gradient"
@@ -122,7 +120,7 @@ class homepage extends Component {
                     </a>
                   </div>
                   <a
-                    href="#item-1"
+                    href="#item1"
                     class="list-group-item clickleftmenu bg-light bg-gradient"
                     style={{ fontSize: "12px", textDecoration: "none" }}
                     id="clickleftmenu7"
