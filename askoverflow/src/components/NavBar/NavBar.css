@@ -13,6 +13,15 @@
 	transform: translate(0, -10px);
 }
 
+.offcanvas-header{
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.btn-close{
+	font-size: 23px;
+}
+
 @media screen and (max-width: 576px) {
 	.searchmainnav{
 		width: 280px !important;

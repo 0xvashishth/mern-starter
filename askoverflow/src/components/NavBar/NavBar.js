@@ -15,20 +15,6 @@ const NavForHome = (props) => {
     console.log(tempvar)
   }
 
-//   function openPage(evt, pageName) {
-//     var i, pagecontent, tablinks;
-//     pagecontent = document.getElementsByClassName("Right-bar");
-//     for (i = 0; i < pagecontent.length; i++) {
-//         pagecontent[i].style.display = "none";
-//     }
-//     tablinks = document.getElementsByClassName("nav-tab");
-//     for (i = 0; i < tablinks.length; i++) {
-//         tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-//     document.getElementById(pageName).style.display = "block";
-//     evt.currentTarget.className += " active";
-// }
-
   const signupmodalclick = () => {
     if(countloginsignup%2 === 0){
     var nameinput = "<div class='form-group'><input required type='text' class='nameremove1 form-control' id='user-name' placeholder='Name..'/></div>";
@@ -236,9 +222,9 @@ const NavForHome = (props) => {
     
     {/*Sidebar Start*/}
     <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
-    <div class="offcanvas-header">
-        <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header align-items-end flex-row-reverse">
+        {/*<h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>*/}
+        <button type="button" class="btn-close text-reset border border-danger" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body px-0">
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
@@ -249,30 +235,28 @@ const NavForHome = (props) => {
             </li> 
             <li class="nav-item mx-auto">
                 <a href="#navlinksnew" class="nav-link text-truncate">
-                    <i class="fas fa-house"></i><span class="ms-1">Home</span>
+                    <i class="fas fa-tachometer-alt"></i><span class="ms-1">Home</span>
                 </a>
             </li>
             <li class="mx-auto">
                 <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
-                    <i class="fas fa-tachometer-alt"></i><span class="ms-1">Dashboard</span> </a>
+                    <i class="fas fa-globe-africa"></i><span class="ms-1">Questions</span> </a>
             </li>
             <li class="mx-auto">
                 <a href="#navlinksnew" class="nav-link text-truncate">
-                    <i class="fas fa-table"></i><span class="ms-1">Orders</span></a>
+                    <i class="fas fa-tags"></i><span class="ms-1">Tags</span></a>
             </li>
-            <li class="dropdown mx-auto">
-                <a href="#navlinksnew" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-sitemap"></i><span class="ms-1">Products</span>
-                </a>
-                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
-                    <li><a class="dropdown-item" href="#navlinksnew">StackExchange</a></li>
-                    <li><a class="dropdown-item" href="#navlinksnew">Community Forum</a></li>
-                    <li><a class="dropdown-item" href="#navlinksnew">Code Editor</a></li>
-                    <li>
-                        <hr class="dropdown-divider"/>
-                    </li>
-                    <li><a class="dropdown-item" href="navlinksnew">Sign out</a></li>
-                </ul>
+            <li class="mx-auto">
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+                    <i class="fas fa-users"></i><span class="ms-1">Users</span> </a>
+            </li>
+            <li class="mx-auto">
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+                    <i class="fas fa-briefcase"></i><span class="ms-1">Jobs</span> </a>
+            </li>
+            <li class="mx-auto">
+                <a href="#custo" class="nav-link text-truncate">
+                    <i class="fas fa-users"></i><span class="ms-1">Teams</span> </a>
             </li>
             <li class="nav-item d-flex mx-auto">
               <div class="d-block d-md-none">
@@ -293,10 +277,26 @@ const NavForHome = (props) => {
               </a>
             </div>
             </li>
-            <li class="mx-auto">
-                <a href="#custo" class="nav-link text-truncate">
-                    <i class="fas fa-users"></i><span class="ms-1">Customers</span> </a>
+            <li class="dropdown mx-auto">
+                <a href="#navlinksnew" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-sitemap"></i><span class="ms-1">Products</span>
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                    <li><a class="dropdown-item" href="#navlinksnew">StackExchange</a></li>
+                    <li><a class="dropdown-item" href="#navlinksnew">Community Forum</a></li>
+                    <li><a class="dropdown-item" href="#navlinksnew">Code Editor</a></li>
+                    {/*<li>
+                        <hr class="dropdown-divider"/>
+                    </li>
+                    <li><a class="dropdown-item" href="navlinksnew">Sign out</a></li>*/}
+                </ul>
             </li>
+            <li class="nav-item mx-auto">
+                <a href="#navlinksnew" class="nav-link text-truncate">
+                    <i class="fas fa-house"></i><span class="ms-1">Logout</span>
+                </a>
+            </li>
+
         </ul>
     </div>
 </div>
