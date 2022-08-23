@@ -3,6 +3,7 @@ import "./homepage.css";
 import { NavForHome } from "../NavBar/NavBar";
 import { SideFeatured } from "../SideFeatured/sidefeatured"
 import { Questions } from "../Questions/questions"
+import { AskQuestion } from "../AskQuestion/askquestion"
 import $ from "jquery";
 
 class homepage extends Component {
@@ -14,13 +15,13 @@ class homepage extends Component {
   }
 
   jquerychangecss = () => {
-    $(".clickleftmenu").click(function () {
+    $(".clickleftmenu").click(function() {
       $(".clickleftmenu")
         .css("color", "black")
         .css("border", "none")
         .css("background", "none");
     });
-    $(".clickleftmenu").on("click", function () {
+    $(".clickleftmenu").on("click", function() {
       var takenid = this.id;
       var str = `#${takenid}`;
       $(str)
@@ -33,7 +34,7 @@ class homepage extends Component {
   };
 
   initialcss = () => {
-    $("document").ready(function () {
+    $("document").ready(function() {
       $("#clickleftmenu1")
         .css("color", "#007bff")
         .css("border-right", "5px solid #007bff")
@@ -54,7 +55,7 @@ class homepage extends Component {
         {/* Grid System for questions */}
         <div class="maincontent">
           <div class="row">
-        {/*first grid*/}
+            {/*first grid*/}
             <div class="col-sm-3 col-md-2 d-none d-sm-block">
               <div class="just-padding">
                 <div class="list-group list-group-flush bg-light bg-gradient">
@@ -130,57 +131,58 @@ class homepage extends Component {
                 </div>
               </div>
             </div>
-          {/*second grid*/}
+            {/*second grid*/}
             <div class="col-sm-9 col-md-10 col-12 bgmoredark cssforpadTomaincontent">
               <div class="row">
-              <div class="col-lg-8">
-              <div class="row margquesions">
-                <div class="col-7 col-xl-9 col-lg-8 col-md-7">
-                  <h3 class="allquesionhead">Top Questions</h3>
-                </div>
-                <div class="col-5 col-xl-3 col-lg-4 col-md-5">
-                  <button class="btnaskquestion btn btn-secondary">Ask Question</button>
-                </div>
-              </div>
-
-              <div class="row margquesions1">
-                <div class="col-lg-4 col-xl-6 col-md-3">
-                  <h4 class="countallquesion">38 Questions</h4>
-                </div>
-                <div class="col-lg-5 col-xl-5 col-md-6">
-                  <div class="row">
-                    <ul class="list-group list-group-horizontal">
-                      <a href="#homepagelink" class="categoryonmaincontent list-group-item active list-group-item-action border border-secondary">Newest</a>
-                      <a href="#homepagelink" class="categoryonmaincontent list-group-item d-flex align-items-center list-group-item-action border border-secondary"><span class="badge badge-secondary">15</span>&nbsp;&nbsp;Top</a>
-                      <a href="#homepagelink" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Views</a>
-                      <a href="#homepagelink" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Oldest</a>
-                    </ul>
+                <div class="col-lg-8">
+                  <div class="row margquesions">
+                    <div class="col-7 col-xl-9 col-lg-8 col-md-7">
+                      <h3 class="allquesionhead">Top Questions</h3>
+                    </div>
+                    <div class="col-5 col-xl-3 col-lg-4 col-md-5">
+                      <button class="btnaskquestion btn btn-secondary" data-bs-toggle="modal" data-bs-target="#askquestionmodal">Ask Question</button>
+                      <AskQuestion />
+                    </div>
                   </div>
+
+                  <div class="row margquesions1">
+                    <div class="col-lg-4 col-xl-6 col-md-3">
+                      <h4 class="countallquesion">38 Questions</h4>
+                    </div>
+                    <div class="col-lg-5 col-xl-5 col-md-6">
+                      <div class="row">
+                        <ul class="list-group list-group-horizontal">
+                          <a href="#homepagelink" class="categoryonmaincontent list-group-item active list-group-item-action border border-secondary">Newest</a>
+                          <a href="#homepagelink" class="categoryonmaincontent list-group-item d-flex align-items-center list-group-item-action border border-secondary"><span class="badge badge-secondary">15</span>&nbsp;&nbsp;Top</a>
+                          <a href="#homepagelink" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Views</a>
+                          <a href="#homepagelink" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Oldest</a>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+
+
+                  <Questions />
+
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#homepagelink" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#1">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#1">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#1">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#homepagelink">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
-              </div>
-              <hr />
-
-
-              <Questions />
-
-              <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#homepagelink" tabindex="-1">Previous</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#1">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#1">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#1">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#homepagelink">Next</a>
-                  </li>
-                </ul>
-              </nav>
-              </div>
-              <div class="col-lg-4 bgmoredark">
-                <br/>
-                  <SideFeatured/>
-              </div>
+                <div class="col-lg-4 bgmoredark">
+                  <br />
+                  <SideFeatured />
+                </div>
               </div>
             </div>
           </div>
