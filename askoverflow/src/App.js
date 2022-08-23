@@ -9,7 +9,7 @@ import UpdateBookInfo from './components/UpdateBookInfo';
 import homepage from './components/HomePage/homepage';
 import testbook from './components/testbook';
 import userprofile from './components/UserProfile/UserProfile';
-
+import Question from './components/Question/question';
 
 class App extends Component {
   render() {
@@ -22,7 +22,7 @@ class App extends Component {
           <Route path='/show-book/:id' component={ShowBookDetails} />
           <Route path='/home/' component={homepage} />
           <Route path='/user/' component={userprofile} />
-          <Route path='/question/' component={}/>
+          <Route path='/question/' component={Question} />
           <Route path='/testing' component={testbook} />
         </div>
       </Router>
