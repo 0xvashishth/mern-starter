@@ -20,7 +20,7 @@ class ShowBookList extends Component {
           books: res.data
         })
       })
-      .catch(err =>{
+      .catch(err => {
         console.log('Error from ShowBookList');
       })
   };
@@ -31,7 +31,7 @@ class ShowBookList extends Component {
     console.log("PrintBook: " + books);
     let bookList;
 
-    if(!books) {
+    if (!books) {
       bookList = "there is no book record!";
     } else {
       bookList = books.map((book, k) =>
@@ -60,7 +60,7 @@ class ShowBookList extends Component {
           </div>
 
           <div className="list">
-                {bookList}
+            {bookList}
           </div>
         </div>
       </div>

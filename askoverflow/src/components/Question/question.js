@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./homepage.css";
+import "./question.css";
 import { NavForHome } from "../NavBar/NavBar";
 import { SideFeatured } from "../SideFeatured/sidefeatured"
 import { Questions } from "../Questions/questions"
@@ -96,28 +96,36 @@ class Question extends Component {
                 <div class="col-lg-8">
                   <div class="row margquesions">
                     <div class="col-7 col-xl-9 col-lg-8 col-md-7">
-                      <h3 class="allquesionhead">Top Questions</h3>
+                      <h1 itemprop="name" class="fs-headline1 ow-break-word mb8 flex--item fl1">
+                        <a href="/questions/45089386/what-is-the-best-way-to-redirect-a-page-using-react-router" class="question-hyperlink">What is the best way to redirect a page using React Router? [closed]
+                        </a>
+                      </h1>
                     </div>
                     <div class="col-5 col-xl-3 col-lg-4 col-md-5">
                       <button class="btnaskquestion btn btn-secondary" data-bs-toggle="modal" data-bs-target="#askquestionmodal">Ask Question</button>
                       <AskQuestion />
                     </div>
                   </div>
+                  <div class="row margquesions">
+                    <div class="col-12">
+                      <span class="fc-light mr2">Asked</span> &nbsp;
+                      <span class="fc-dark mr2">5 years, 1 month ago</span> | &nbsp;
+                      <span class="fc-light mr2">Modified</span> &nbsp;
+                      <span class="fc-dark mr2">1 year, 2 months ago</span> | &nbsp;
+                      <span class="fc-light mr2">Viewed</span> &nbsp;
+                      <span class="fc-dark mr8">404k times</span>
+                    </div>
+                  </div>
+                  <hr />
 
                   <div class="row margquesions1">
-                    <div class="col-lg-4 col-xl-6 col-md-3">
-                      <h4 class="countallquesion">38 Questions</h4>
-                    </div>
-                    <div class="col-lg-5 col-xl-5 col-md-6">
-                      <div class="row">
-                        <ul class="list-group list-group-horizontal">
-                          <a href="#homepagelink" class="categoryonmaincontent list-group-item active list-group-item-action border border-secondary">Newest</a>
-                          <a href="#homepagelink" class="categoryonmaincontent list-group-item d-flex align-items-center list-group-item-action border border-secondary"><span class="badge badge-secondary">15</span>&nbsp;&nbsp;Top</a>
-                          <a href="#homepagelink" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Views</a>
-                          <a href="#homepagelink" class="categoryonmaincontent list-group-item list-group-item-action border border-secondary">Oldest</a>
-                        </ul>
-                      </div>
-                    </div>
+                    <p>Extra Content</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                      Why do we use it?
+                      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+                    </p>
                   </div>
                   <hr />
 
