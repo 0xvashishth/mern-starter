@@ -3,17 +3,16 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import axios from 'axios';
 
-
 class CreateBook extends Component {
   constructor() {
     super();
     this.state = {
       title: '',
-      isbn:'',
-      author:'',
-      description:'',
-      published_date:'',
-      publisher:''
+      isbn: '',
+      author: '',
+      description: '',
+      published_date: '',
+      publisher: ''
     };
   }
 
@@ -38,11 +37,11 @@ class CreateBook extends Component {
       .then(res => {
         this.setState({
           title: '',
-          isbn:'',
-          author:'',
-          description:'',
-          published_date:'',
-          publisher:''
+          isbn: '',
+          author: '',
+          description: '',
+          published_date: '',
+          publisher: ''
         })
         this.props.history.push('/');
       })
@@ -59,13 +58,13 @@ class CreateBook extends Component {
             <div className="col-md-8 m-auto">
               <br />
               <Link to="/" className="btn btn-outline-warning float-left">
-                  Show BooK List
+                Show BooK List
               </Link>
             </div>
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Add Book</h1>
               <p className="lead text-center">
-                  Create new book
+                Create new book
               </p>
 
               <form noValidate onSubmit={this.onSubmit}>
@@ -136,11 +135,11 @@ class CreateBook extends Component {
                 </div>
 
                 <input
-                    type="submit"
-                    className="btn btn-outline-warning btn-block mt-4"
+                  type="submit"
+                  className="btn btn-outline-warning btn-block mt-4"
                 />
               </form>
-          </div>
+            </div>
           </div>
         </div>
       </div>

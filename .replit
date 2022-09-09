@@ -1,6 +1,6 @@
 
 hidden = [".config"]
-run = "cd askoverflow && npm start"
+run = "npm run app"
 
 [[hints]]
 regex = "Error \\[ERR_REQUIRE_ESM\\]"
