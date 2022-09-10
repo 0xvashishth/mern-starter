@@ -119,32 +119,166 @@ class Question extends Component {
                   <hr />
 
                   <div class="row margquesions1">
-                    <p>Extra Content</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                      <p>Extra Content</p>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-                      Why do we use it?
-                      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-                    </p>
+                      </p>
+                    </div>
+                    <div class="col-1"></div>
                   </div>
                   <hr />
 
+                  <div class="row margquesions1">
+                    <div class="col-8">
+                      <h3>{10} Answers:</h3>
+                    </div>
 
-                  <Questions />
+                    <div class="col-3 ">
+                      <div class="row">
+                        <div class="col-6">
+                          sorted by
+                        </div>
+                        <div class="col-6">
+                          <select>
+                            <option>ascending</option>
+                            <option>Most votes</option>
+                            <option>descending</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
 
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#homepagelink" tabindex="-1">Previous</a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#1">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#1">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#1">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#homepagelink">Next</a>
-                      </li>
-                    </ul>
-                  </nav>
+                  <div>
+                    {/*first answer*/}
+                    <div class="row">
+                      <div class="col-1">
+                        <div>
+                          <a href="#"><i class="fas fa-chevron-up"></i></a>
+                        </div>
+                        <div>{5}</div>
+                        <div>
+                          <a href="#"><i class="fas fa-chevron-down"></i></a>
+                        </div>
+                        <div><i class="fa fa-check"></i></div>
+                      </div>
+                      <div class="col-10 bg-light text-dark">
+                        <div class="row">
+
+                          <div class="col-10">
+                            <p>
+                              Why do we use it?
+                              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-7">
+                            <span class="fc-light mr2"><a href="#">share</a></span> &nbsp;
+                            <span class="fc-light mr2"><a href="#">edit</a></span> &nbsp;
+                            <span class="fc-light mr2"><a href="#">follow</a></span> &nbsp;
+                          </div>
+                          <div class="col-5">
+                            <div class="font-weight-light text-secondary">
+                              answered <span title="2019-03-03 16:34:02Z" class="relativetime">Mar 3, 2019 at 16:34</span>
+                            </div>
+                            <div>
+                              <div class="user-gravatar32">
+                                <img src="https://graph.facebook.com/100001761656850/picture?type=large" alt="user avatar" width="32" height="32" class="bar-sm" /> &nbsp; <a href="#">d.poriya</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-1"></div>
+                    </div>
+                    <br />
+                    <br />
+                    {/* second answer */}
+                    <div class="row answerm">
+                      <div class="col-1">
+                        <div>
+                          <a href="#"><i class="fas fa-chevron-up"></i></a>
+                        </div>
+                        <div>{5}</div>
+                        <div>
+                          <a href="#"><i class="fas fa-chevron-down"></i></a>
+                        </div>
+                        <div><i class="fa fa-check"></i></div>
+                      </div>
+                      <div class="col-10 bg-light text-dark">
+                        <div class="row">
+
+                          <div class="col-10">
+                            <p>
+                              Why do we use it?
+                              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-7">
+                            <span class="fc-light mr2"><a href="#">share</a></span> &nbsp;
+                            <span class="fc-light mr2"><a href="#">edit</a></span> &nbsp;
+                            <span class="fc-light mr2"><a href="#">follow</a></span> &nbsp;
+                          </div>
+                          <div class="col-5">
+                            <div class="font-weight-light text-secondary">
+                              answered <span title="2019-03-03 16:34:02Z" class="relativetime">Mar 3, 2019 at 16:34</span>
+                            </div>
+                            <div>
+                              <div class="user-gravatar32">
+                                <img src="https://graph.facebook.com/100001761656850/picture?type=large" alt="user avatar" width="32" height="32" class="bar-sm" /> &nbsp; <a href="#">d.poriya</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-1"></div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+
+                  <div class="bottom-margin">
+                    <h3>Your Answer</h3>
+                    <div class="col-12 border-post-answer">
+                      <section id="header-strip">
+                        <ul>
+                          <li><i class="fa fa-bold" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-italic" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-underline" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-header" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-indent" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-list-ol" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-list-ul" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-clipboard" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-link" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-font" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-undo" aria-hidden="true"></i></li>
+                          <li><i class="fa fa-files-o" aria-hidden="true"></i></li>
+                        </ul>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <form >
+
+                          <textarea rows="8" class="col-12" placeholder="Give your answer">
+                          </textarea>
+                          <button type="submit" class="btn btn-primary col-12" >Post Your Answer</button>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
                 <div class="col-lg-4 bgmoredark">
                   <br />
